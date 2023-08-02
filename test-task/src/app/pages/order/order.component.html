@@ -1,0 +1,26 @@
+ <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">
+            Name
+          </label>
+          <input id="name" type="text" formControlName="name">
+        </div>
+        <div *ngIf="checkoutForm.controls['name'].invalid && (checkoutForm.controls['name'].dirty || checkoutForm.controls['name'].touched)" class="alert alert-danger" >
+            <div class="invalid" *ngIf="checkoutForm.controls['name'].errors?.['required']">
+            Name is required.
+          </div>
+        </div>
+      
+        <div>
+          <label for="phone">
+            Phone
+          </label>
+          <input id="phone" type="text" formControlName="phone" >
+        </div>
+        <div *ngIf="checkoutForm.controls['phone'].invalid && (checkoutForm.controls['phone'].dirty || checkoutForm.controls['phone'].touched)" class="alert alert-danger">
+            <div class="invalid" *ngIf="checkoutForm.controls['phone'].errors?.['required']">
+            Phone is required.
+          </div>
+        </div>
+        <button [routerLink]="['/product']" class="button" mat-raised-button>Submit order</button> 
+</form>
