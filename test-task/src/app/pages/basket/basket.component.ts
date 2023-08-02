@@ -16,8 +16,8 @@ export class BasketComponent implements OnInit{
   constructor(
     private cartService: ProductService,
     private http: HttpClient,
-    private orderService: OrdersService
-  ) { }
+    private orderService: OrdersService) { }
+
     ngOnInit(): void {
       this.getTotalPrice();
       console.log(this.totalPrice)
@@ -27,21 +27,6 @@ export class BasketComponent implements OnInit{
   items = this.cartService.getItems();
   totalPrice: number | undefined;
   
-
-
- 
-
-  // order = {
-  //   userName: '',
-  //   userPhone: '',
-  //   userAdress: '',
-  //   userComment:''
-  // };
-
-  // getTotalCost() {
-  //   return this.product.map(t => t.cost).reduce((acc, value) => acc + value, 0);
-  // }
-
   productCount(product: Product, status: boolean) {
     if (status) {
       product.count++;
@@ -63,11 +48,4 @@ export class BasketComponent implements OnInit{
       return total + (elem.count * elem.price);
     }, 0);
   }
-
-
-
- 
-
-  
-
 }
