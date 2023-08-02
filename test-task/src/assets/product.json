@@ -1,0 +1,44 @@
+[
+        {
+            "id": 1,
+            "name": "Phone 10",
+            "price": 799,
+            "description": "A phone with one of the best cameras"
+          },
+          {
+            "id": 2,
+            "name": "Phone 11",
+            "price": 1000,
+            "description": "A phone with one of the best cameras"
+          },
+          {
+            "id": 3,
+            "name": "Phone 12",
+            "price": 1300,
+            "description": "A phone with one of the best cameras"
+          },
+          {
+            "id": 4,
+            "name": "Phone 13",
+            "price": 1600,
+            "description": "A phone with one of the best cameras"
+          },
+          {
+            "id": 5,
+            "name": "Phone 14",
+            "price": 2000,
+            "description": "A phone with one of the best cameras"
+          },
+          {
+            "id": 6,
+            "name": "'Phone 15",
+            "price": 1200,
+            "description": "A phone with one of the best cameras"
+          },
+          {
+            "id": 7,
+            "name": "Phone Maxi",
+            "price": 1500,
+            "description": "A phone with one of the best cameras"
+          }
+]

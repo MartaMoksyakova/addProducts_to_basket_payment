@@ -1,0 +1,23 @@
+<div class="empty" *ngIf="!items.length">
+    <p>Cart is empty</p>
+</div>
+<div class="not_empty" *ngIf="items.length">
+    <div class="cart-item" *ngFor="let item of items">
+        <span>Name: {{ item.name }}</span> <br>
+        <span> Price: {{ item.price | currency }}</span>
+        <div class="productCountWrapper">
+            <span class="productCount lessProduct" (click)="productCount(item,false)"></span>
+            <input class="product-qty"  type="text" [value]="item.count">
+            <span class="productCount moreProduct update-cart-product" (click)="productCount(item,true)"></span>
+          </div>
+      </div>
+      <div class="total"> Total: {{ totalPrice | currency }}</div>
+      <button [routerLink]="['/order']" mat-raised-button>Order</button>   
+</div>
+  
+  
+
+  
+
+
+           
